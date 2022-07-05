@@ -1,0 +1,21 @@
+// Global SCSS-files imports
+@import './global/normalize';
+@import './global/vars';
+@import './global/mixins';
+@import './global/global';
+@import './global/fonts';
+
+// Import styles for shared blocks
+@import '../html/components/common-blocks/header/header';
+@import '../html/components/common-blocks/footer/footer';
+@import '../html/components/common-blocks/cards/cards';
+@import '../html/components/common-blocks/form/form';
+@import '../html/components/common-blocks/modal/modal';
+
+// Import block styles for a page
+@import '../html/components/page-blocks/articles/articles';
+@import '../html/components/page-blocks/intro/intro';
+@import '../html/components/page-blocks/slider/slider';
+
+// Libs
+// ...

@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontSecondary, $fontMain;
+    background-color: $grayColor;
+}
+
+button {
+    font-family: $fontSecondary, $fontMain;
+    font-size: $fontSize16;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    font-weight: bold;
+}
+
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakPoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakPoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakPoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakPoint480) {
+        max-width: none;
+    }
+}
+
+.wrapper {
+    // overflow: hidden;
+}
+
+.button {
+    background-color: $blueColor;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 16px 30px 16px 30px;
+    transition: all 0.5s;
+}
+
+.button-hover_white {
+    &:hover {
+        background-color: white;
+    }
+}
+
+.button-hover_dark-blue {
+    &:hover {
+        background-color: $darkBlueColor;
+    }
+}
+
+.input {
+    outline: none;
+    border: none;
+    border-radius: $borderRadius;
+    padding: 16px;
+    background-color: $lavanderColor;
+}

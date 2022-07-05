@@ -1,0 +1,44 @@
+// Hi, i am Nicholas..
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        @media (max-width: $breakPoint992) {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: $breakPoint992) {
+        align-items: initial;
+        height: initial
+    }
+}
+
+.card {
+    max-width: 300px;
+    min-height: 500px;
+    background-color: white;
+    border-radius: $borderRadius;
+    overflow: hidden;
+
+    &__picture-picture {
+        width: 100%;
+    }
+
+    &__content {
+        padding: 20px;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}

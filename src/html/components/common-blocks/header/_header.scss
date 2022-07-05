@@ -1,0 +1,110 @@
+.header {
+    background-color: $graniteColor;
+    height: 90px;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%
+    }
+
+    &__logo {
+        a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-list {
+        display: flex;
+
+        @media (max-width: $breakPoint992) {
+            display: none;
+        }
+    }
+
+    // Burger
+    &__burger {
+        display: none;
+    
+        @media (max-width: $breakPoint992) {
+            display: block;
+        }
+    }
+    
+    &__burger-checkbox {
+        display: none;
+        
+        &:checked ~ .header__mobile-menu {
+            display: block;
+        }
+    }
+    
+    &__burger-icon {
+        cursor: pointer;
+        fill: $burgerColor;
+        width: $burgerWidth;
+        height: $burgerHeight;
+    }
+    
+    &__mobile-menu {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $graniteColor;
+        display: none;
+    }
+    
+    &__mobile-menu-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.menu {
+    &__item {
+        margin: 0px 20px 0px 0px;
+
+        @media (max-width: $breakPoint992) {
+            text-align: center;
+            margin: 15px 0px 0px 0px;
+        } 
+    }
+
+    &__link {
+        font-size: $fontSize16;
+        transition: color 0.5s;
+        color: white;
+
+        &:hover {
+            color: $blueColor;
+        }
+
+        @media (max-width: $breakPoint992) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__link_active {
+        color: $blueColor
+    }
+
+    &__button {
+        @media (max-width: $breakPoint992) {
+            margin: 0px 20px 0px 0px;
+        }
+    }
+}
